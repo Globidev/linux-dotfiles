@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # nload pane
 tmux split-window -t .0 -h
 tmux send-keys -t .1 "nload eth0" C-m
