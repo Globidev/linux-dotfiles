@@ -1,0 +1,54 @@
+# Use Ctrl-a instead of Ctrl-b
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# Config reloading
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+
+# Enable mouse
+setw -g mode-mouse on
+set-option -g mouse-resize-pane on
+set-option -g mouse-select-pane on
+set-option -g mouse-select-window on
+
+# Status bar
+set-window-option -g window-status-current-fg white
+set-window-option -g window-status-current-bg black
+set-window-option -g window-status-current-attr bold
+set-window-option -g window-status-current-format "        #[underscore]#W (#P)#[nounderscore]        "
+
+set-window-option -g window-status-fg default
+set-window-option -g window-status-bg default
+set-window-option -g window-status-attr default
+set-window-option -g window-status-format "        #W        "
+
+set-option -g status-left "[ #S ]  "
+set-option -g status-left-attr bold
+set-option -g status-left-bg yellow
+
+set-option -g status-right-attr default
+set-option -g status-right-bg default
+
+set-option -g status-bg green
+
+# Disable automatic renaming
+set-option -g allow-rename off
+
+# xterm-keys
+set-window-option -g xterm-keys on
+
+# zoom this pane to full screen
+bind + \
+  new-window -d -n tmux-zoom 'clear && echo TMUX ZOOM && read' \;\
+  swap-pane -s tmux-zoom.0 \;\
+  select-window -t tmux-zoom
+# restore this pane
+bind - \
+  last-window \;\
+  swap-pane -s tmux-zoom.0 \;\
+  kill-window -t tmux-zoom
+
+# vi copy
+setw -g mode-keys vi
+bind -t vi-copy 'y' copy-pipe "tmux save-buffer - | xclip -selection clipboard"

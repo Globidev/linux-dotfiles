@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+tma() {
+    local session_name="dev"
+    local window_name="main"
+
+    tmux has-session -t $session_name &> /dev/null
+
+    if [ $? != 0 ]
+     then
+        tmux new-session -s $session_name -n $window_name -d
+        tmux send-keys -t $session_name "~/.dotfiles/arrangements/dev" C-m
+    fi
+
+    tmux -2 attach -t $session_name
+}
