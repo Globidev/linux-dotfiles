@@ -9,7 +9,7 @@ tma() {
     if [ $? != 0 ]
      then
         tmux new-session -s $session_name -n $window_name -d
-        tmux send-keys -t $session_name "~/.dotfiles/arrangements/dev" C-m
+        tmux send-keys -t $session_name "$DOT/tmux/arrangements/dev.sh" C-m
     fi
 
     tmux -2 attach -t $session_name
