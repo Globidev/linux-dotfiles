@@ -38,17 +38,6 @@ set-option -g allow-rename off
 # xterm-keys
 set-window-option -g xterm-keys on
 
-# zoom this pane to full screen
-bind + \
-  new-window -d -n tmux-zoom 'clear && echo TMUX ZOOM && read' \;\
-  swap-pane -s tmux-zoom.0 \;\
-  select-window -t tmux-zoom
-# restore this pane
-bind - \
-  last-window \;\
-  swap-pane -s tmux-zoom.0 \;\
-  kill-window -t tmux-zoom
-
 # vi copy
 setw -g mode-keys vi
 bind -t vi-copy 'y' copy-pipe "tmux save-buffer - | xclip -selection clipboard"
