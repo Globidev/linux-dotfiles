@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -u
+
+for file in $DOT/oh-my-zsh/custom/* ; do
+    sed -i "s:\$\$DOT:$DOT:g" $file
+    ln -sf $file $HOME/.oh-my-zsh/custom/
+done

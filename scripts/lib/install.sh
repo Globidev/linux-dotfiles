@@ -30,4 +30,10 @@ install_component() {
         info "Symlinking $target in $HOME"
         ln -sf $file $HOME/$target
     done
+
+    for file in $dir/*.post-install ; do
+        local name=$(basename $file)
+        info "Executing post install script: ${name%.post-install}..."
+        $file
+    done
 }
