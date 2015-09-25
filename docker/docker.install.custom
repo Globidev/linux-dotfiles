@@ -2,7 +2,7 @@
 
 # Here I install docker from the binaries as it gives better control over the daemon
 DOCKER_PATH="/usr/bin/docker"
-DOCKER_URL="https://get.docker.com/builds/$(uname -s)/$(uname -p)/docker-latest"
+DOCKER_URL="https://get.docker.com/builds/$(uname -s)/$(uname -m)/docker-latest"
 
 sudo curl -L $DOCKER_URL -o $DOCKER_PATH
 sudo chmod +x $DOCKER_PATH
