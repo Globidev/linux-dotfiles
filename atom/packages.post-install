@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -u
+
+while read package; do
+    apm install $package
+done < $DOT/atom/packages.list

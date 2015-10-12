@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DEB_PATH=$(mktemp)
+curl -L https://atom.io/download/deb > $DEB_PATH
+sudo dpkg -i $DEB_PATH
+rm -f $DEB_PATH
