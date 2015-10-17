@@ -12,3 +12,6 @@ alias gr="git remote -v"
 alias dc="docker-compose"
 alias dm="docker-machine"
 
+# clipboard
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
