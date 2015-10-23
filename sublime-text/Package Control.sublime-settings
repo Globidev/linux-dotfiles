@@ -1,10 +1,15 @@
 {
-	"install_missing": true,
-	"installed_packages":
-	[
-		"Package Control",
-		"SublimeLinter",
-		"Dockerfile Syntax Highlighting",
-		"One Dark Color Scheme"
-	]
+    "install_missing": true,
+    "installed_packages":
+    [
+        "Dockerfile Syntax Highlighting",
+        "Git",
+        "MarkdownEditing",
+        "One Dark Color Scheme",
+        "One Dark Material - Theme",
+        "Package Control",
+        "Pretty JSON",
+        "SideBarEnhancements",
+        "SublimeLinter"
+    ]
 }
