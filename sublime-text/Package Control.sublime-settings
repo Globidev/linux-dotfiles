@@ -1,0 +1,10 @@
+{
+	"install_missing": true,
+	"installed_packages":
+	[
+		"Package Control",
+		"SublimeLinter",
+		"Dockerfile Syntax Highlighting",
+		"One Dark Color Scheme"
+	]
+}

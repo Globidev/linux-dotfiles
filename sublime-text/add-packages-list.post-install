@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -u
+
+USER_PACKAGES_PATH="$HOME/.config/sublime-text-3/Packages/User"
+cp "$DOT/sublime-text/Package Control.sublime-settings" $USER_PACKAGES_PATH
