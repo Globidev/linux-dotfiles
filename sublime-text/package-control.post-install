@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+set -u
+
 PACKAGES_PATH="$HOME/.config/sublime-text-3/Installed Packages"
 PACKAGE_NAME="Package Control.sublime-package"
+
+mkdir -p "$PACKAGES_PATH"
 curl -L 'https://packagecontrol.io/Package%20Control.sublime-package' > "$PACKAGES_PATH"/"$PACKAGE_NAME"

@@ -3,4 +3,6 @@
 set -u
 
 USER_PACKAGES_PATH="$HOME/.config/sublime-text-3/Packages/User"
+
+mkdir -p $USER_PACKAGES_PATH
 cp "$DOT/sublime-text/Package Control.sublime-settings" $USER_PACKAGES_PATH
