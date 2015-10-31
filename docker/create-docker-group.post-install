@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-sudo groupadd docker
+sudo groupadd -f docker
 sudo gpasswd -a $USER docker
-newgrp docker
