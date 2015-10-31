@@ -2,5 +2,7 @@
 
 set -u
 
-# From https://github.com/robbyrussell/oh-my-zsh#advanced-installation
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+if [ ! -d $HOME/.oh-my-zsh ]; then
+    # From https://github.com/robbyrussell/oh-my-zsh#advanced-installation
+    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
