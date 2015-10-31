@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-DEB_PATH=$(mktemp)
-curl -L http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb > $DEB_PATH
-sudo dpkg -i $DEB_PATH
-rm -f $DEB_PATH
+if ! which subl &> /dev/null; then
+    DEB_PATH=$(mktemp)
+    curl -L http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb > $DEB_PATH
+    sudo dpkg -i $DEB_PATH
+    rm -f $DEB_PATH
+fi
