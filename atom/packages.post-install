@@ -2,6 +2,9 @@
 
 set -u
 
+INSTALLED=$(apm list --installed)
 while read package; do
-    apm install $package
+    if ! echo "$INSTALLED" | grep $package &> /dev/null; then
+        apm install $package
+    fi
 done < $DOT/atom/packages.list
