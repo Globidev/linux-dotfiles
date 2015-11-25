@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Here I install docker from the binaries as it gives better control over the daemon
-DOCKER_PATH="/usr/bin/docker"
+DOCKER_PATH="/usr/local/bin/docker"
 DOCKER_URL="https://get.docker.com/builds/$(uname -s)/$(uname -m)/docker-latest"
 
 if [[ ! -e $DOCKER_PATH ]]; then
