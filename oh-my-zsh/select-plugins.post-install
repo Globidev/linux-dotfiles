@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+set -u
+
 sed -i '/^plugins=/c\plugins=(docker)' $HOME/.zshrc

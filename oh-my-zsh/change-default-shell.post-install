@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -u
+
 LOGIN_SHELL=$(getent passwd $USER | cut -d: -f7)
 
 if [[ ! $LOGIN_SHELL == *"zsh"* ]]; then
