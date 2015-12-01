@@ -3,5 +3,5 @@
 LOGIN_SHELL=$(getent passwd $LOGNAME | cut -d: -f7)
 
 if [[ ! $LOGIN_SHELL == *"zsh"* ]]; then
-    sudo chsh -s $(which zsh)
+    chsh -s $(which zsh) $USER
 fi

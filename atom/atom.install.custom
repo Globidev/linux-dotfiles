@@ -3,6 +3,6 @@
 if ! which atom &> /dev/null; then
     DEB_PATH=$(mktemp)
     curl -L https://atom.io/download/deb > $DEB_PATH
-    sudo dpkg -i $DEB_PATH
+    dpkg -i $DEB_PATH
     rm -f $DEB_PATH
 fi

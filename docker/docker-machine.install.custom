@@ -9,5 +9,5 @@ if [[ ! -e $MACHINE_PATH ]]; then
     tempdir=$(dirname $tempfile)
     curl -L $MACHINE_URL -o $tempfile
     unzip $tempfile -d $tempdir
-    sudo mv -f "$tempdir/docker-machine"* $(dirname $MACHINE_PATH)
+    mv -f "$tempdir/docker-machine"* $(dirname $MACHINE_PATH)
 fi

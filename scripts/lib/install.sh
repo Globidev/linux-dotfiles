@@ -6,7 +6,7 @@ shopt -s dotglob
 source $DOT/scripts/lib/log.sh
 
 apt_get() {
-    sudo apt-get install -yqq $@
+    apt-get install -yqq $@
 }
 
 install_component() {

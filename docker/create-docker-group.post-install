@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-sudo groupadd -f docker
-sudo gpasswd -a $USER docker
+groupadd -f docker
+gpasswd -a $USER docker
