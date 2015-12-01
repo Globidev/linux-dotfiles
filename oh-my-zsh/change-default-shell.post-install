@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LOGIN_SHELL=$(getent passwd $LOGNAME | cut -d: -f7)
+LOGIN_SHELL=$(getent passwd $USER | cut -d: -f7)
 
 if [[ ! $LOGIN_SHELL == *"zsh"* ]]; then
     chsh -s $(which zsh) $USER
