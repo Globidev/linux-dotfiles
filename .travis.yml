@@ -1,0 +1,12 @@
+dist: trusty
+sudo: required
+
+before_install:
+  - curl -L https://get.docker.com/builds/`uname -s`/`uname -m`/docker-latest > /tmp/docker
+  - chmod +x /tmp/docker
+  - sudo mv /tmp/docker /usr/local/bin
+
+script:
+  - docker --version
+  - sudo docker daemon & sleep 5
+  - docker build -t dot .
