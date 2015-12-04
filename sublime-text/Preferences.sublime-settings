@@ -1,6 +1,5 @@
 {
     "always_show_minimap_viewport": true,
-    "color_scheme": "Packages/User/SublimeLinter/One Dark (SL).tmTheme",
     "draw_white_space": "all",
     "ensure_newline_at_eof_on_save": true,
     "font_size": 12,
@@ -21,7 +20,6 @@
     ],
     "show_line_endings": true,
     "show_tab_close_buttons": false,
-    "theme": "OneDarkMaterial.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true
 }
