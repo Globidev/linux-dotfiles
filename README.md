@@ -1,4 +1,4 @@
-# linux-dotfiles [![Build Status](https://travis-ci.com/Globidev/linux-dotfiles.svg?token=fxUoaGBZLHdg1P1XdtZh&branch=master)](https://travis-ci.com/Globidev/linux-dotfiles)
+# linux-dotfiles [![Build Status](https://travis-ci.org/Globidev/linux-dotfiles.svg?branch=master)](https://travis-ci.org/Globidev/linux-dotfiles)
 My dotfiles for a linux environment
 
 ### Usage
