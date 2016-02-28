@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
 MACHINE_PATH="/usr/local/bin/docker-machine"
-MACHINE_VERSION="0.5.1"
-MACHINE_URL="https://github.com/docker/machine/releases/download/v$MACHINE_VERSION/docker-machine_linux-amd64.zip"
+MACHINE_VERSION="0.6.0"
+MACHINE_URL="https://github.com/docker/machine/releases/download/$MACHINE_VERSION/docker-machine-$(uname -s)-$(uname -m)"
 
 if [[ ! -e $MACHINE_PATH ]]; then
-    tempfile=$(mktemp)
-    tempdir=$(dirname $tempfile)
-    curl -L $MACHINE_URL -o $tempfile
-    unzip $tempfile -d $tempdir
-    mv -f "$tempdir/docker-machine"* $(dirname $MACHINE_PATH)
+    curl -L $MACHINE_URL -o $MACHINE_PATH
+    chmod +x $MACHINE_PATH
 fi
