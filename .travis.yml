@@ -7,6 +7,7 @@ before_install:
   - sudo mv /tmp/docker /usr/local/bin
 
 script:
+  - sudo service docker stop
   - docker --version
   - sudo docker daemon & sleep 5
   - docker build -t dot .
