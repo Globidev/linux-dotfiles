@@ -2,9 +2,9 @@
 
 # Here I install docker from the binaries as it gives better control over the daemon
 DOCKER_PATH="/usr/local/bin/docker"
-DOCKER_URL="https://get.docker.com/builds/$(uname -s)/$(uname -m)/docker-latest"
+DOCKER_VERSION="1.11.0"
+DOCKER_URL="https://get.docker.com/builds/$(uname -s)/$(uname -m)/docker-$DOCKER_VERSION.tgz"
 
 if [[ ! -e $DOCKER_PATH ]]; then
-    curl -L $DOCKER_URL -o $DOCKER_PATH
-    chmod +x $DOCKER_PATH
+    curl -L $DOCKER_URL | tar xz -C $(dirname $DOCKER_PATH) --strip-component 1
 fi
